@@ -111,7 +111,7 @@ class SizeLimit {
         return {
           ...current,
           [name]: {
-            name: result.name,
+            name: name,
             size: +result.size,
             ...(result.loading !== undefined ? { loading: +result.loading } : {})
           }
