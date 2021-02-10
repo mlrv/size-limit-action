@@ -106,7 +106,11 @@ class SizeLimit {
 
     return results.reduce(
       (current: { [name: string]: IResult }, result: any, i: number) => {
-        const name = `${result.name}_${i}`
+        const name = i === 0
+          ? result.name
+          : i === 1
+            ? `${result.name}_gzip`
+            : `${result.name}_brotli`
 
         return {
           ...current,
