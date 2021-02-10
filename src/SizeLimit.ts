@@ -113,7 +113,6 @@ class SizeLimit {
           [name]: {
             name: name,
             size: +result.size,
-            ...(result.loading !== undefined ? { loading: +result.loading } : {})
           }
         };
       },
