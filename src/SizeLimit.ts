@@ -104,10 +104,6 @@ class SizeLimit {
   parseResults(output: string): { [name: string]: IResult } {
     const results = JSON.parse(output);
 
-    console.log('----------------------')
-    console.log(results)
-    console.log('----------------------')
-
     return results.reduce(
       (current: { [name: string]: IResult }, result: any) => {
         let time = {};
@@ -117,15 +113,15 @@ class SizeLimit {
           const running = +result.running;
 
           time = {
-            running,
+            // running,
             loading,
-            total: loading + running
+            // total: loading + running
           };
         }
 
         return {
           ...current,
-          [result.name]: {
+          [result.name + "_" + results.indexOf(result)]: {
             name: result.name,
             size: +result.size,
             ...time
