@@ -30,7 +30,8 @@
   "devDependencies": {
     "@size-limit/file": "^4.3.1",
     "@size-limit/time": "^4.3.1",
-    "@types/jest": "^24.0.23",
+    "@types/jest": "^26.0.20",
+    "@types/mocha": "^8.2.0",
     "@types/node": "^12.7.12",
     "@typescript-eslint/parser": "^2.8.0",
     "@zeit/ncc": "^0.22.1",
